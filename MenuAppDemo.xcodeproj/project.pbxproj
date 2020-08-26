@@ -3,27 +3,59 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3D53ED0824F6C01900231E5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED0724F6C01900231E5F /* AppDelegate.swift */; };
-		3D53ED0A24F6C01900231E5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED0924F6C01900231E5F /* SceneDelegate.swift */; };
-		3D53ED0C24F6C01900231E5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED0B24F6C01900231E5F /* ViewController.swift */; };
+		3D53ED0C24F6C01900231E5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED0B24F6C01900231E5F /* LoginViewController.swift */; };
 		3D53ED0F24F6C01A00231E5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D53ED0D24F6C01A00231E5F /* Main.storyboard */; };
 		3D53ED1124F6C02F00231E5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D53ED1024F6C02F00231E5F /* Assets.xcassets */; };
 		3D53ED1424F6C02F00231E5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D53ED1224F6C02F00231E5F /* LaunchScreen.storyboard */; };
+		3D53ED1C24F6C43000231E5F /* MenuInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED1B24F6C43000231E5F /* MenuInputField.swift */; };
+		3D53ED1E24F6C94A00231E5F /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED1D24F6C94A00231E5F /* UIConstants.swift */; };
+		3D53ED2224F6CFF800231E5F /* RestDataClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED2124F6CFF800231E5F /* RestDataClient.swift */; };
+		3D53ED2424F6D00600231E5F /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED2324F6D00600231E5F /* DataAccess.swift */; };
+		3D53ED2724F6D31300231E5F /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED2624F6D31300231E5F /* LoginUserRequest.swift */; };
+		3D53ED2924F6E12400231E5F /* LoginUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED2824F6E12400231E5F /* LoginUserResponse.swift */; };
+		3D53ED2B24F6E74200231E5F /* VenueLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED2A24F6E74200231E5F /* VenueLocationRequest.swift */; };
+		3D53ED2D24F6EA5200231E5F /* VenueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED2C24F6EA5200231E5F /* VenueResponse.swift */; };
+		3D53ED2F24F6EB4700231E5F /* VenuesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED2E24F6EB4700231E5F /* VenuesResponse.swift */; };
+		3D53ED3324F6EF4400231E5F /* ListOfVenuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED3224F6EF4400231E5F /* ListOfVenuesViewController.swift */; };
+		3D53ED3724F6F0B100231E5F /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED3624F6F0B100231E5F /* VenueTableViewCell.swift */; };
+		3D53ED3924F6F86500231E5F /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED3824F6F86500231E5F /* VenueDetailViewController.swift */; };
+		3D53ED3C24F70BC200231E5F /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED3B24F70BC200231E5F /* UIImageViewExtension.swift */; };
+		3D53ED3E24F70FFA00231E5F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED3D24F70FFA00231E5F /* BaseViewController.swift */; };
+		3D53ED4324F712C400231E5F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED4224F712C400231E5F /* UIViewExtension.swift */; };
+		CFB08483034A1B5E4E7EC20D /* Pods_MenuAppDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6AC55870F85D5888E7F825 /* Pods_MenuAppDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07A61E84259A092A68F5BB9D /* Pods-MenuAppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuAppDemo.release.xcconfig"; path = "Target Support Files/Pods-MenuAppDemo/Pods-MenuAppDemo.release.xcconfig"; sourceTree = "<group>"; };
 		3D53ED0424F6C01900231E5F /* MenuAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D53ED0724F6C01900231E5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D53ED0924F6C01900231E5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3D53ED0B24F6C01900231E5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D53ED0B24F6C01900231E5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3D53ED0E24F6C01A00231E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D53ED1024F6C02F00231E5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D53ED1324F6C02F00231E5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D53ED1524F6C02F00231E5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D53ED1B24F6C43000231E5F /* MenuInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInputField.swift; sourceTree = "<group>"; };
+		3D53ED1D24F6C94A00231E5F /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		3D53ED2124F6CFF800231E5F /* RestDataClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestDataClient.swift; sourceTree = "<group>"; };
+		3D53ED2324F6D00600231E5F /* DataAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
+		3D53ED2624F6D31300231E5F /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
+		3D53ED2824F6E12400231E5F /* LoginUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserResponse.swift; sourceTree = "<group>"; };
+		3D53ED2A24F6E74200231E5F /* VenueLocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueLocationRequest.swift; sourceTree = "<group>"; };
+		3D53ED2C24F6EA5200231E5F /* VenueResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueResponse.swift; sourceTree = "<group>"; };
+		3D53ED2E24F6EB4700231E5F /* VenuesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesResponse.swift; sourceTree = "<group>"; };
+		3D53ED3224F6EF4400231E5F /* ListOfVenuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfVenuesViewController.swift; sourceTree = "<group>"; };
+		3D53ED3624F6F0B100231E5F /* VenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
+		3D53ED3824F6F86500231E5F /* VenueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
+		3D53ED3B24F70BC200231E5F /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		3D53ED3D24F70FFA00231E5F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3D53ED4224F712C400231E5F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		DD6AC55870F85D5888E7F825 /* Pods_MenuAppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuAppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EEFDAA204E169B302F15F7 /* Pods-MenuAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuAppDemo.debug.xcconfig"; path = "Target Support Files/Pods-MenuAppDemo/Pods-MenuAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFB08483034A1B5E4E7EC20D /* Pods_MenuAppDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +75,8 @@
 			children = (
 				3D53ED0624F6C01900231E5F /* MenuAppDemo */,
 				3D53ED0524F6C01900231E5F /* Products */,
+				D2C8D6DC5C994CC95FF0B28D /* Pods */,
+				43D067C1F366F4503C7B3DEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +91,118 @@
 		3D53ED0624F6C01900231E5F /* MenuAppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3D53ED3A24F70BA200231E5F /* Extensions */,
 				3D53ED0724F6C01900231E5F /* AppDelegate.swift */,
-				3D53ED0924F6C01900231E5F /* SceneDelegate.swift */,
-				3D53ED0B24F6C01900231E5F /* ViewController.swift */,
+				3D53ED1F24F6C95300231E5F /* UI */,
 				3D53ED0D24F6C01A00231E5F /* Main.storyboard */,
 				3D53ED1024F6C02F00231E5F /* Assets.xcassets */,
 				3D53ED1224F6C02F00231E5F /* LaunchScreen.storyboard */,
 				3D53ED1524F6C02F00231E5F /* Info.plist */,
+				3D53ED2524F6D01400231E5F /* DataManagment */,
 			);
 			path = MenuAppDemo;
+			sourceTree = "<group>";
+		};
+		3D53ED1F24F6C95300231E5F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED3F24F7125300231E5F /* Login */,
+				3D53ED4024F7125F00231E5F /* ListOfVenues */,
+				3D53ED4124F7126D00231E5F /* VenueDetail */,
+				3D53ED2024F6C95C00231E5F /* CustomControls */,
+				3D53ED3D24F70FFA00231E5F /* BaseViewController.swift */,
+				3D53ED1D24F6C94A00231E5F /* UIConstants.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		3D53ED2024F6C95C00231E5F /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED1B24F6C43000231E5F /* MenuInputField.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		3D53ED2524F6D01400231E5F /* DataManagment */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED2124F6CFF800231E5F /* RestDataClient.swift */,
+				3D53ED2324F6D00600231E5F /* DataAccess.swift */,
+				3D53ED3524F6EFE700231E5F /* RequestModels */,
+				3D53ED3424F6EFD500231E5F /* ResponseModels */,
+			);
+			path = DataManagment;
+			sourceTree = "<group>";
+		};
+		3D53ED3424F6EFD500231E5F /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED2824F6E12400231E5F /* LoginUserResponse.swift */,
+				3D53ED2C24F6EA5200231E5F /* VenueResponse.swift */,
+				3D53ED2E24F6EB4700231E5F /* VenuesResponse.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
+		3D53ED3524F6EFE700231E5F /* RequestModels */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED2624F6D31300231E5F /* LoginUserRequest.swift */,
+				3D53ED2A24F6E74200231E5F /* VenueLocationRequest.swift */,
+			);
+			path = RequestModels;
+			sourceTree = "<group>";
+		};
+		3D53ED3A24F70BA200231E5F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED3B24F70BC200231E5F /* UIImageViewExtension.swift */,
+				3D53ED4224F712C400231E5F /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3D53ED3F24F7125300231E5F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED0B24F6C01900231E5F /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3D53ED4024F7125F00231E5F /* ListOfVenues */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED3224F6EF4400231E5F /* ListOfVenuesViewController.swift */,
+				3D53ED3624F6F0B100231E5F /* VenueTableViewCell.swift */,
+			);
+			path = ListOfVenues;
+			sourceTree = "<group>";
+		};
+		3D53ED4124F7126D00231E5F /* VenueDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED3824F6F86500231E5F /* VenueDetailViewController.swift */,
+			);
+			path = VenueDetail;
+			sourceTree = "<group>";
+		};
+		43D067C1F366F4503C7B3DEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD6AC55870F85D5888E7F825 /* Pods_MenuAppDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2C8D6DC5C994CC95FF0B28D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6EEFDAA204E169B302F15F7 /* Pods-MenuAppDemo.debug.xcconfig */,
+				07A61E84259A092A68F5BB9D /* Pods-MenuAppDemo.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D53ED1824F6C02F00231E5F /* Build configuration list for PBXNativeTarget "MenuAppDemo" */;
 			buildPhases = (
+				F32496098A7C74C1FA9F4FA4 /* [CP] Check Pods Manifest.lock */,
 				3D53ED0024F6C01900231E5F /* Sources */,
 				3D53ED0124F6C01900231E5F /* Frameworks */,
 				3D53ED0224F6C01900231E5F /* Resources */,
+				FE7032E0F90E9DB66617BFC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +273,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F32496098A7C74C1FA9F4FA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MenuAppDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE7032E0F90E9DB66617BFC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MenuAppDemo/Pods-MenuAppDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MenuAppDemo/Pods-MenuAppDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MenuAppDemo/Pods-MenuAppDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D53ED0024F6C01900231E5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D53ED0C24F6C01900231E5F /* ViewController.swift in Sources */,
+				3D53ED0C24F6C01900231E5F /* LoginViewController.swift in Sources */,
+				3D53ED2724F6D31300231E5F /* LoginUserRequest.swift in Sources */,
+				3D53ED3724F6F0B100231E5F /* VenueTableViewCell.swift in Sources */,
+				3D53ED2D24F6EA5200231E5F /* VenueResponse.swift in Sources */,
+				3D53ED2224F6CFF800231E5F /* RestDataClient.swift in Sources */,
+				3D53ED3C24F70BC200231E5F /* UIImageViewExtension.swift in Sources */,
+				3D53ED2424F6D00600231E5F /* DataAccess.swift in Sources */,
+				3D53ED2F24F6EB4700231E5F /* VenuesResponse.swift in Sources */,
+				3D53ED4324F712C400231E5F /* UIViewExtension.swift in Sources */,
 				3D53ED0824F6C01900231E5F /* AppDelegate.swift in Sources */,
-				3D53ED0A24F6C01900231E5F /* SceneDelegate.swift in Sources */,
+				3D53ED1C24F6C43000231E5F /* MenuInputField.swift in Sources */,
+				3D53ED2B24F6E74200231E5F /* VenueLocationRequest.swift in Sources */,
+				3D53ED2924F6E12400231E5F /* LoginUserResponse.swift in Sources */,
+				3D53ED3924F6F86500231E5F /* VenueDetailViewController.swift in Sources */,
+				3D53ED3E24F70FFA00231E5F /* BaseViewController.swift in Sources */,
+				3D53ED3324F6EF4400231E5F /* ListOfVenuesViewController.swift in Sources */,
+				3D53ED1E24F6C94A00231E5F /* UIConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +478,7 @@
 		};
 		3D53ED1924F6C02F00231E5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6EEFDAA204E169B302F15F7 /* Pods-MenuAppDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +497,7 @@
 		};
 		3D53ED1A24F6C02F00231E5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07A61E84259A092A68F5BB9D /* Pods-MenuAppDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
