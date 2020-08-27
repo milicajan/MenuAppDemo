@@ -14,23 +14,42 @@ private struct ListOfVenuesViewControllerKeys {
 
 class ListOfVenuesViewController: BaseViewController {
     
+    private let titleLabel: UILabel = UILabel()
     private let listOfVenuesTableView: UITableView = UITableView()
+    private let refreshControler: UIRefreshControl = UIRefreshControl()
     
-    var venues: [VenueResponse] = []
+    private var venues: [VenueResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = listOfVenuesTitleLocalizedString
         
+        self.view.backgroundColor = .white
+        
+        refreshControler.addTarget(self, action: #selector(fetchVenues), for: .valueChanged)
+        
+        addTitleLabel()
         addTableView()
         
         setupConstraints()
+        
+        fetchVenues()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        fetchVenues()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    private func addTitleLabel() {
+        titleLabel.backgroundColor = .white
+        titleLabel.text = listOfVenuesTitleLocalizedString
+        titleLabel.textColor = .black
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.customFont(ofSize: FontSizes.title25, type: .bold)
+        titleLabel.numberOfLines = 1
+        
+        view.addSubview(titleLabel)
     }
     
     private func addTableView() {
@@ -45,33 +64,44 @@ class ListOfVenuesViewController: BaseViewController {
         listOfVenuesTableView.register(VenueTableViewCell.self, forCellReuseIdentifier: ListOfVenuesViewControllerKeys.venueCellIdentifierKey)
         listOfVenuesTableView.layoutMargins = UIEdgeInsets.zero
         listOfVenuesTableView.separatorInset = UIEdgeInsets.zero
+        listOfVenuesTableView.tableFooterView = UIView(frame: .zero)
+        listOfVenuesTableView.addSubview(refreshControler)
         
         view.addSubview(listOfVenuesTableView)
     }
     
     private func setupConstraints() {
+        titleLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.left.right.equalToSuperview()
+        }
+        
         listOfVenuesTableView.snp.makeConstraints { (make) in
-            make.left.right.top.bottom.equalToSuperview()
+            make.top.equalTo(titleLabel.snp.bottom)
+            make.bottom.equalToSuperview().offset(-Margins.small10)
+            make.left.right.equalToSuperview()
         }
     }
     
-    private func fetchVenues() {
-        self.presentLoader()
+    @objc private func fetchVenues() {
+        self.refreshControler.beginRefreshing()
         
         let request = VenueLocationRequest()
         request.latitude = "44.001783"
         request.longitude = "21.26907"
         
-        dataAccess.fetchVenues(request: request, successHandler: { (response) in
-            self.dismissLoader()
+        dataAccess.fetchVenues(request: request, successHandler: { [weak self] (response) in
+            guard let self = self else { return }
             
+            self.refreshControler.endRefreshing()
             DispatchQueue.main.async {
                 self.venues = response.venues
                 self.listOfVenuesTableView.reloadData()
             }
-        }) { (error) in
-            self.dismissLoader()
+        }) { [weak self] (error) in
+            guard let self = self else { return }
             
+            self.refreshControler.endRefreshing()
             self.showError(message: "Something went wrong. Please, try again! \(error ?? "")")
         }
     }

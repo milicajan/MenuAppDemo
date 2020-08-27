@@ -20,7 +20,6 @@ struct MIMETypes {
     public static let json = "application/json"
 }
 
-
 class RestDataClient {
     
     private let baseUrl: String = "https://api-playground.menu.app/api"

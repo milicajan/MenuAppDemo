@@ -28,7 +28,8 @@ class VenueTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: VenueTableViewCellKeys.venueCellIdentifierKey)
-        accessoryType = .none
+        
+        self.accessoryType = .none
         self.selectionStyle = .none
         self.backgroundColor = UIColor.white
         
@@ -40,12 +41,11 @@ class VenueTableViewCell: UITableViewCell {
     private func addVenueNameLabel() {
         venueNameLabel.textColor = .darkGray
         venueNameLabel.textAlignment = .center
-        venueNameLabel.font = UIFont.systemFont(ofSize: 25.0)
+        venueNameLabel.font = UIFont.customFont(ofSize: FontSizes.title20, type: .regular)
         venueNameLabel.numberOfLines = 0
         
         addSubview(venueNameLabel)
     }
-    
     
     private func setupConstraints() {
         venueNameLabel.snp.makeConstraints { (make) in

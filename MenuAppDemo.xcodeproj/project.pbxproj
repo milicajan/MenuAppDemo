@@ -27,6 +27,10 @@
 		3D53ED3C24F70BC200231E5F /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED3B24F70BC200231E5F /* UIImageViewExtension.swift */; };
 		3D53ED3E24F70FFA00231E5F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED3D24F70FFA00231E5F /* BaseViewController.swift */; };
 		3D53ED4324F712C400231E5F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED4224F712C400231E5F /* UIViewExtension.swift */; };
+		3D53ED6B24F7762D00231E5F /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D53ED6A24F7762D00231E5F /* UIFontExtension.swift */; };
+		3D53ED7224F77E3700231E5F /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D53ED7124F77E3700231E5F /* Roboto-Bold.ttf */; };
+		3D53ED7424F77E4F00231E5F /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D53ED7324F77E4F00231E5F /* Roboto-Light.ttf */; };
+		3D53ED7624F77E5A00231E5F /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D53ED7524F77E5A00231E5F /* Roboto-Regular.ttf */; };
 		CFB08483034A1B5E4E7EC20D /* Pods_MenuAppDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6AC55870F85D5888E7F825 /* Pods_MenuAppDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +58,10 @@
 		3D53ED3B24F70BC200231E5F /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		3D53ED3D24F70FFA00231E5F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3D53ED4224F712C400231E5F /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		3D53ED6A24F7762D00231E5F /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		3D53ED7124F77E3700231E5F /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		3D53ED7324F77E4F00231E5F /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		3D53ED7524F77E5A00231E5F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		DD6AC55870F85D5888E7F825 /* Pods_MenuAppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuAppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6EEFDAA204E169B302F15F7 /* Pods-MenuAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuAppDemo.debug.xcconfig"; path = "Target Support Files/Pods-MenuAppDemo/Pods-MenuAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,14 +99,15 @@
 		3D53ED0624F6C01900231E5F /* MenuAppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3D53ED4424F7745E00231E5F /* Resources */,
 				3D53ED3A24F70BA200231E5F /* Extensions */,
-				3D53ED0724F6C01900231E5F /* AppDelegate.swift */,
 				3D53ED1F24F6C95300231E5F /* UI */,
+				3D53ED2524F6D01400231E5F /* DataManagment */,
+				3D53ED0724F6C01900231E5F /* AppDelegate.swift */,
 				3D53ED0D24F6C01A00231E5F /* Main.storyboard */,
 				3D53ED1024F6C02F00231E5F /* Assets.xcassets */,
 				3D53ED1224F6C02F00231E5F /* LaunchScreen.storyboard */,
 				3D53ED1524F6C02F00231E5F /* Info.plist */,
-				3D53ED2524F6D01400231E5F /* DataManagment */,
 			);
 			path = MenuAppDemo;
 			sourceTree = "<group>";
@@ -159,6 +168,7 @@
 			children = (
 				3D53ED3B24F70BC200231E5F /* UIImageViewExtension.swift */,
 				3D53ED4224F712C400231E5F /* UIViewExtension.swift */,
+				3D53ED6A24F7762D00231E5F /* UIFontExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +196,16 @@
 				3D53ED3824F6F86500231E5F /* VenueDetailViewController.swift */,
 			);
 			path = VenueDetail;
+			sourceTree = "<group>";
+		};
+		3D53ED4424F7745E00231E5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3D53ED7524F77E5A00231E5F /* Roboto-Regular.ttf */,
+				3D53ED7124F77E3700231E5F /* Roboto-Bold.ttf */,
+				3D53ED7324F77E4F00231E5F /* Roboto-Light.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		43D067C1F366F4503C7B3DEC /* Frameworks */ = {
@@ -265,7 +285,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D53ED7624F77E5A00231E5F /* Roboto-Regular.ttf in Resources */,
 				3D53ED1424F6C02F00231E5F /* LaunchScreen.storyboard in Resources */,
+				3D53ED7224F77E3700231E5F /* Roboto-Bold.ttf in Resources */,
+				3D53ED7424F77E4F00231E5F /* Roboto-Light.ttf in Resources */,
 				3D53ED1124F6C02F00231E5F /* Assets.xcassets in Resources */,
 				3D53ED0F24F6C01A00231E5F /* Main.storyboard in Resources */,
 			);
@@ -330,6 +353,7 @@
 				3D53ED2F24F6EB4700231E5F /* VenuesResponse.swift in Sources */,
 				3D53ED4324F712C400231E5F /* UIViewExtension.swift in Sources */,
 				3D53ED0824F6C01900231E5F /* AppDelegate.swift in Sources */,
+				3D53ED6B24F7762D00231E5F /* UIFontExtension.swift in Sources */,
 				3D53ED1C24F6C43000231E5F /* MenuInputField.swift in Sources */,
 				3D53ED2B24F6E74200231E5F /* VenueLocationRequest.swift in Sources */,
 				3D53ED2924F6E12400231E5F /* LoginUserResponse.swift in Sources */,

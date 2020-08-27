@@ -22,6 +22,7 @@ class VenueDetailViewController: BaseViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: logoutTitleLocalizedString, style: .plain, target: self, action: #selector(logout))
         
         addVenueImageView()
@@ -43,6 +44,9 @@ class VenueDetailViewController: BaseViewController {
         venueNameLabel.text = venue.name
         venueNameLabel.textAlignment = .left
         venueNameLabel.textColor = .gray
+        venueNameLabel.font = UIFont.customFont(ofSize: FontSizes.title15, type: .bold)
+        venueNameLabel.numberOfLines = 1
+        venueNameLabel.adjustsFontSizeToFitWidth = true
         
         view.addSubview(venueNameLabel)
     }
@@ -51,6 +55,9 @@ class VenueDetailViewController: BaseViewController {
         welcomeMsgLabel.text = venue.welcomeMsg
         welcomeMsgLabel.textAlignment = .left
         welcomeMsgLabel.textColor = .gray
+        welcomeMsgLabel.font = UIFont.customFont(ofSize: FontSizes.title15, type: .bold)
+        welcomeMsgLabel.numberOfLines = 3
+        welcomeMsgLabel.adjustsFontSizeToFitWidth = true
         
         view.addSubview(welcomeMsgLabel)
     }
@@ -58,6 +65,9 @@ class VenueDetailViewController: BaseViewController {
         introLabel.text = venue.description
         introLabel.textAlignment = .left
         introLabel.textColor = .gray
+        introLabel.font = UIFont.customFont(ofSize: FontSizes.title15, type: .bold)
+        introLabel.numberOfLines = 3
+        introLabel.adjustsFontSizeToFitWidth = true
         
         view.addSubview(introLabel)
     }
@@ -66,44 +76,53 @@ class VenueDetailViewController: BaseViewController {
         isOpenLabel.text = venue.isOpen ? openTitleLocalizedString : closedTitleLocalizedString
         isOpenLabel.textAlignment = .left
         isOpenLabel.textColor = .gray
+        isOpenLabel.font = UIFont.customFont(ofSize: FontSizes.title15, type: .bold)
+        isOpenLabel.numberOfLines = 1
+        isOpenLabel.adjustsFontSizeToFitWidth = true
         
         view.addSubview(isOpenLabel)
     }
     
     private func setupConstraints() {
         venueImageView.snp.makeConstraints { (make) in
-            make.left.right.top.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.left.right.equalToSuperview()
             make.height.equalTo(2 * Sizes.screenSize.height / 3)
         }
         
         venueNameLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.top.equalTo(venueImageView.snp.bottom).offset(Margins.small10)
-            make.right.equalToSuperview()
+            make.left.right.equalToSuperview().inset(Margins.small10)
+            if venue.thumbnail.isEmpty {
+                make.top.equalTo(view.safeAreaLayoutGuide)
+            } else {
+                make.top.equalTo(venueImageView.snp.bottom).offset(Margins.small5)
+            }
         }
         
         welcomeMsgLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.top.equalTo(venueNameLabel.snp.bottom).offset(Margins.small10)
-            make.right.equalToSuperview()
+            make.left.right.equalToSuperview().inset(Margins.small10)
+            make.top.equalTo(venueNameLabel.snp.bottom).offset(Margins.small5)
         }
         
         introLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.top.equalTo(welcomeMsgLabel.snp.bottom).offset(Margins.small10)
-            make.right.equalToSuperview()
+            make.left.right.equalToSuperview().inset(Margins.small10)
+            make.top.equalTo(welcomeMsgLabel.snp.bottom).offset(Margins.small5)
         }
         
         isOpenLabel.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.top.equalTo(introLabel.snp.bottom).offset(Margins.small10)
-            make.right.equalToSuperview()
+            make.left.right.equalToSuperview().inset(Margins.small10)
+            make.top.equalTo(introLabel.snp.bottom).offset(Margins.small5)
+            make.bottom.lessThanOrEqualTo(view.safeAreaLayoutGuide)
         }
     }
     
-    @objc func logout() {
-        UserDefaults.standard.set(nil, forKey: "userToken")
-        self.navigationController?.popToViewController(LoginViewController(), animated: true)
+    @objc private func logout() {
+        UserDefaults.standard.set(nil, forKey: UserDefaultsKeys.userToken)
+        if let _ = navigationController?.viewControllers.first as? LoginViewController {
+            self.navigationController?.popToRootViewController(animated: true)
+        } else {
+            self.navigationController?.pushViewController(LoginViewController(), animated: true)
+        }
     }
 }
 

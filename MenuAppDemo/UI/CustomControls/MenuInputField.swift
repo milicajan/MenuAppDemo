@@ -76,7 +76,7 @@ class MenuInputField: UIView {
     private func addInvalidLabel() {
         invalidLabel.textColor = UIColor.red
         invalidLabel.textAlignment = .left
-        // invalidLabel.font = UIFont.customFont(ofSize: FontSizes.title13, type: .light)
+        invalidLabel.font = UIFont.customFont(ofSize: FontSizes.title15, type: .light)
         invalidLabel.isHidden = true
         invalidLabel.text = requiredTitleLocalizedString
         
@@ -85,7 +85,7 @@ class MenuInputField: UIView {
     
     private func addTitleLabel() {
         titleLabel.textAlignment = .left
-        //titleLabel.font = UIFont.customFont(ofSize: FontSizes.title13, type: .light)
+        titleLabel.font = UIFont.customFont(ofSize: FontSizes.title15, type: .light)
         titleLabel.textColor = .blue
         
         addSubview(titleLabel)
@@ -95,7 +95,7 @@ class MenuInputField: UIView {
         textField.autocorrectionType = .no
         textField.autocapitalizationType = .none
         textField.textColor = .gray
-        //textField.font = UIFont.customFont(ofSize: FontSizes.title18, type: .light)
+        textField.font = UIFont.customFont(ofSize: FontSizes.title15, type: .light)
         
         addSubview(textField)
     }
@@ -134,6 +134,18 @@ class MenuInputField: UIView {
             make.left.equalToSuperview().offset(Margins.small5)
             make.right.equalToSuperview().offset(-Margins.small5)
         }
+    }
+    
+    func editingTextField() {
+        self.hideTitleLabel = false
+        self.separatorColor = .blue
+        self.invalidLabelHidden = true
+    }
+    
+    func emptyInputData() {
+        self.textField.text = ""
+        self.hideTitleLabel = true
+        self.separatorColor = .gray
     }
 }
 

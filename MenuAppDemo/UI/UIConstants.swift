@@ -19,5 +19,17 @@ struct Sizes {
     static let invalidLabelHeight: CGFloat = 20.0
     static let textFieldHeight: CGFloat = 35.0
     static let separatorHeight: CGFloat = 1.0
+    static let inputFieldHeight: CGFloat = 70.0
+    static let loginButtonHeight: CGFloat = 50.0
     static let screenSize: CGRect = UIScreen.main.bounds
+}
+
+struct FontSizes {
+    static let title15: CGFloat = 15.0
+    static let title20: CGFloat = 20.0
+    static let title25: CGFloat = 25.0
+}
+
+struct UserDefaultsKeys {
+    static let userToken = "userToken"
 }

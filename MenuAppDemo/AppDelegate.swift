@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        if let token = UserDefaults.standard.string(forKey: "userToken"), !token.isEmpty {
+        if let token = UserDefaults.standard.string(forKey: UserDefaultsKeys.userToken), !token.isEmpty {
             window?.rootViewController = UINavigationController(rootViewController: ListOfVenuesViewController())
         } else {
            window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
